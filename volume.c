@@ -1,9 +1,5 @@
-#define _USE_MATH_DEFINES // Para habilitar constantes matemáticas como M_PI
+#include <math.h> // Para a constante M_PI e funções matemáticas
 #include "volume.h"
-#include <math.h>
-#ifndef M_PI
-#define M_PI 3.14159265358979323846
-#endif
 
 float cubo(float aresta) {
     return aresta * aresta * aresta;
