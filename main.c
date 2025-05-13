@@ -1,12 +1,25 @@
 #include <stdio.h>
 #include "volume.h"
 
-int main(void) 
-{
-    printf ("Hello, Unifei!\n");
+int main() {
+    float largura, profundidade, altura, raio;
 
-    float volume = esfera (3.0f);
-    printf("Volume da esfera: %.2f\n", volume);
+    // Leitura dos valores
+    printf("Largura: ");
+    scanf("%f", &largura);
+    printf("Profundidade: ");
+    scanf("%f", &profundidade);
+    printf("Altura: ");
+    scanf("%f", &altura);
+    printf("Raio: ");
+    scanf("%f", &raio);
+
+    // Cálculo dos volumes
+    printf("Volume do cubo: %.2f\n", cubo(largura)); // Usando largura como exemplo para a aresta
+    printf("Volume do paralelepípedo: %.2f\n", paralelepipedo(largura, profundidade, altura));
+    printf("Volume da esfera: %.2f\n", esfera(raio));
+    printf("Volume do cilindro: %.2f\n", cilindro(raio, altura));
+    printf("Volume da pirâmide: %.2f\n", piramide(largura, profundidade, altura));
 
     return 0;
 }
